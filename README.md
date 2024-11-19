@@ -2,6 +2,8 @@
 
 A modern, responsive portfolio website showcasing my journey in software development, skills, and projects.
 
+https://aenuhub.github.io/personal-website/
+
 ## Features
 
 - Clean, minimalist design with smooth animations
