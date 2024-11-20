@@ -116,21 +116,32 @@ body {
     font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .nav-container {
+        flex-direction: column;
         padding: 1rem;
-    }
-
-    .nav-wrapper {
-        padding: 0 1rem;
+        gap: 1rem;
     }
 
     .nav-links {
-        gap: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: auto;
+        padding: 0.5rem 0;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-links a {
         font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+        white-space: nowrap;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
     }
 }
 
@@ -154,6 +165,11 @@ body {
     text-align: center;
 }
 
+.hero-section .container {
+    width: 100%;
+    padding: 0 1rem;
+}
+
 .hero-section h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -171,6 +187,41 @@ body {
     font-size: 1.25rem;
     color: #4b5563;
     margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+    .hero-section {
+        padding: 4rem 0 2rem;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-section .tagline {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+    }
 }
 
 /* Buttons */
@@ -334,7 +385,7 @@ section h2::before {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     section {
         padding: 4rem 0;
     }
@@ -357,7 +408,7 @@ section h2::before {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .nav-container {
         flex-direction: column;
         padding: 1rem;
@@ -378,6 +429,53 @@ section h2::before {
     .nav-links a::after {
         margin-left: 0.3rem;
         font-size: 0.8em;
+    }
+
+    .logo {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .logo-symbol {
+        font-size: 1.5rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .hero-section {
+        padding: 4rem 0 2rem;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-section .tagline {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 250px;
     }
 }
 
@@ -615,7 +713,7 @@ section h2::before {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .nav-container {
         flex-direction: column;
         padding: 1rem;
