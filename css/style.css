@@ -8,6 +8,10 @@
     --transition: all 0.3s ease;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -703,6 +707,31 @@ section h2::before {
 
 .github-button:hover i {
     transform: translateX(4px);
+}
+
+#scrollToTopButton {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+#scrollToTopButton:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+#scrollToTopButton:focus {
+    outline: none; 
 }
 
 /* Footer */

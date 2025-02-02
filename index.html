@@ -143,10 +143,41 @@
         </section>
     </main>
 
+    <button id="scrollToTopButton" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 1000;">&#8593;</button>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2023 Mehmet Özsığırtmaç. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        // Smooth scroll to sections
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll to top button
+        const scrollToTopButton = document.getElementById('scrollToTopButton');
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        window.onscroll = function() {
+            const button = document.getElementById('scrollToTopButton');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = "block"; // Show button
+            } else {
+                button.style.display = "none"; // Hide button
+            }
+        };
+    </script>
 </body>
 </html>
