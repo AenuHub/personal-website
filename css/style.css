@@ -120,6 +120,38 @@ body {
     font-size: 1.2rem;
 }
 
+#logo-button {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+#logo-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+#logo-button:active {
+    transform: translateY(1px);
+}
+
+.logo-symbol {
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.logo-subtitle {
+    font-family: 'Fira Code', monospace;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
 @media (max-width: 640px) {
     .nav-container {
         flex-direction: column;
